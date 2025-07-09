@@ -31,7 +31,8 @@ services:
     depends_on:
     - mongodb
 
-  web:
+  web: 
+    build:
     image: web:v1
     container_name: web
     ports:
