@@ -8,18 +8,20 @@ volumes:
   mysql:
   rabbitmq:
 
-version: '3.8'  
+version: '3.8'
+
 services:
- web: 
-  build: 
-  ports: 
-  - "80:80"
-    context: .
-  # docker run -d --name mongodb --network=roboshop mongodb:1
+  web:
+    build:
+      context: .
+    ports:
+      - "80:80"
+
   shipping:
     image: shipping:v1
     ports:
-    - "8080:8080"
+      - "8080:8080"
+
 
   mongodb:
     image: mongodb:v1
