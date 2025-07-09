@@ -14,8 +14,7 @@ services:
   web:
     build:
       context: .
-    ports:
-      - "80:80"
+    ports: - "80:80"
       depends_on:
     - catalogue
     - cart
