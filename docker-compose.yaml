@@ -9,6 +9,10 @@ volumes:
   rabbitmq:
 services:
   # docker run -d --name mongodb --network=roboshop mongodb:1
+  shipping:
+    image: shipping:v1
+    ports: "8080:8080"
+
   mongodb:
     image: mongodb:v1
     container_name: mongodb
