@@ -16,6 +16,12 @@ services:
       context: .
     ports:
       - "80:80"
+      depends_on:
+    - catalogue
+    - cart
+    - user
+    - shipping
+    - payment
 
   shipping:
     image: shipping:v1
@@ -40,20 +46,7 @@ services:
     # - roboshop
     depends_on:
     - mongodb
-
-  web: 
-    build:
-    image: web:v1
-    container_name: web
-    ports:
-    - "80:80"
-    depends_on:
-    - catalogue
-    - cart
-    - user
-    - shipping
-    - payment
-    
+   
   redis:
     image: redis
     container_name: redis
