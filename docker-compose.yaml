@@ -10,8 +10,8 @@ volumes:
 
 version: '3.8'  
 services:
-web: 
-  build: .
+ web: 
+  build: 
   ports: 
   - "80:80"
     context: .
