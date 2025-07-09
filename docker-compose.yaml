@@ -8,6 +8,9 @@ volumes:
   mysql:
   rabbitmq:
 services:
+web : 
+  build:
+    context: .
   # docker run -d --name mongodb --network=roboshop mongodb:1
   shipping:
     image: shipping:v1
