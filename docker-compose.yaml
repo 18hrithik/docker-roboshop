@@ -98,3 +98,5 @@ services:
       - rabbitmq
       - user
       - cart
+
+      ok
